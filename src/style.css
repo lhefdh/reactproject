@@ -1,0 +1,7 @@
+.active a {
+    color: white;
+  }
+
+.active {
+    color: white !important;
+}
