@@ -3,17 +3,20 @@ import {Link} from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import '../style.css';
 
-export default function Header() {
+export default function Header(props) {
+
 
     let location = useLocation();
-
-    const homeLinkIsActive = (location.pathname === "/pages/");
-    const servicesLinkIsActive = (location.pathname === "/pages/Services");
-    const projectsLinkIsActive = (location.pathname === "/pages/Projects");
-    const blogLinkIsActive = (location.pathname === "/pages/Blog");
-    const contactLinkIsActive = (location.pathname === "/pages/Contact");
+    
+    console.log(props.homePathForHeader)
+    const homeLinkIsActive = (location.pathname === props.homePathInHeader);
+    const servicesLinkIsActive = (location.pathname === props.servicesPathInHeader);
+    const projectsLinkIsActive = (location.pathname === props.projectsPathInHeader);
+    const blogLinkIsActive = (location.pathname === props.blogPathInHeader);
+    const contactLinkIsActive = (location.pathname === props.contactPathInHeader);
 
     return (
+        <div>
     <nav className="navbar navbar-expand-lg bg-dark text-uppercase">
         <div className="container-fluid ms-5" >
             <a className="navbar-brand text-white" href="#">john doe</a>
@@ -37,7 +40,9 @@ export default function Header() {
                 </ul>
             </div>
         </div>
-        
     </nav>
+
+   
+    </div>
     );
 }
