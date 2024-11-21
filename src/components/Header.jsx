@@ -1,14 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { useLocation } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import '../style.css';
 
 export default function Header(props) {
 
-
     let location = useLocation();
     
-    console.log(props.homePathForHeader)
     const homeLinkIsActive = (location.pathname === props.homePathInHeader);
     const servicesLinkIsActive = (location.pathname === props.servicesPathInHeader);
     const projectsLinkIsActive = (location.pathname === props.projectsPathInHeader);
@@ -16,9 +14,9 @@ export default function Header(props) {
     const contactLinkIsActive = (location.pathname === props.contactPathInHeader);
 
     return (
-        <div>
-    <nav className="navbar navbar-expand-lg bg-dark text-uppercase">
-        <div className="container-fluid ms-5" >
+     
+    <nav className="navbar navbar-expand-lg bg-dark text-uppercase fixed-top">
+        <div className="container-fluid ms-5">
             <a className="navbar-brand text-white" href="#">john doe</a>
             <div className="d-flex justify-content-end me-5" id="navbarSupportedContent">
                 <ul className="navbar-nav mb-2 mb-lg-0 text-secondary">
@@ -42,7 +40,5 @@ export default function Header(props) {
         </div>
     </nav>
 
-   
-    </div>
     );
 }

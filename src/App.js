@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Header from './components/Header'
@@ -9,8 +8,15 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import LegalNotices from './pages/LegalNotices';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 function App() {
+  let personalData={
+    name:"john doe",
+    address1: "40 rue laure diebold",
+    address2: "69009 lyon, france",
+    telephone:"téléphone : 06 20 30 40 50",
+  }
 
   let homePath="/pages/";
   let servicesPath="/pages/Services";
@@ -31,6 +37,7 @@ function App() {
         <Route path="/pages/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer personalData={personalData}/>
     </div>
   );
 }
