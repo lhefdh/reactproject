@@ -5,7 +5,7 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-variation-settings:
       "wdth" 100,
       "YTLC" 500;
@@ -20,16 +20,24 @@ p {
       "YTLC" 500;
   }
   h1{
-    font-size: 2rem
+    font-size: 2.5rem
   }
   h2{
-    font-size: 1.75rem
+    font-size: 1.875rem
   }
   h3{
     font-size: 1.5rem
   }
   strong{
     color:black
+  }
+  .border{
+    border-color:blue !important;
+  }
+  .card{
+    border: none;
+    height:35vh;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
   }
 
 #home{
@@ -55,4 +63,6 @@ li::marker {
 .active {
     color: white !important;
 }
+
+
 
