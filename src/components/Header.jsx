@@ -9,7 +9,7 @@ export default function Header(props) {
     
     const homeLinkIsActive = (location.pathname === props.homePathInHeader);
     const servicesLinkIsActive = (location.pathname === props.servicesPathInHeader);
-    const projectsLinkIsActive = (location.pathname === props.projectsPathInHeader);
+    const portfolioLinkIsActive = (location.pathname === props.portfolioPathInHeader);
     const blogLinkIsActive = (location.pathname === props.blogPathInHeader);
     const contactLinkIsActive = (location.pathname === props.contactPathInHeader);
 
@@ -27,7 +27,7 @@ export default function Header(props) {
                         <Link className={servicesLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Services">services</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={projectsLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Projects">mes réalisations</Link>
+                        <Link className={portfolioLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Portfolio">mes réalisations</Link>
                     </li>
                     <li className="nav-item">
                         <Link className={blogLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Blog">mon blog</Link>
