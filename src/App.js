@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import Header from './components/Header'
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Projects from './pages/Projects';
+import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import LegalNotices from './pages/LegalNotices';
@@ -20,17 +20,17 @@ function App() {
 
   let homePath="/pages/";
   let servicesPath="/pages/Services";
-  let projectsPath="/pages/Projects";
+  let portfolioPath="/pages/Portfolio";
   let blogPath="/pages/Blog";
   let contactPath="/pages/Contact";
 
   return (
     <div className="App">
-      <Header homePathInHeader={homePath} servicesPathInHeader={servicesPath} projectsPathInHeader={projectsPath} blogPathInHeader={blogPath} contactPathInHeader={contactPath}/>
+      <Header homePathInHeader={homePath} servicesPathInHeader={servicesPath} portfolioPathInHeader={portfolioPath} blogPathInHeader={blogPath} contactPathInHeader={contactPath}/>
       <Routes>
         <Route path="/pages/" element={<Home />} />
         <Route path="/pages/Services" element={<Services />} />
-        <Route path="/pages/Projects" element={<Projects />} />
+        <Route path="/pages/Portfolio" element={<Portfolio />} />
         <Route path="/pages/Blog" element={<Blog />} />
         <Route path="/pages/Contact" element={<Contact />} />
         <Route path="/pages/LegalNotices" element={<LegalNotices />} />
