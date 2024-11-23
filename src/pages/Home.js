@@ -68,7 +68,7 @@ export default function Home() {
 
     return (
       <div id="home" className="bg-white">
-        <div style={bgStyle} className="bg-image shadow-2-strong">
+        <div  className="bg-image shadow-2-strong" style={bgStyle}>
           <div className="mask">
           <div className="container pt-5 d-flex flex-column align-items-center justify-content-center align-content-center text-center text-white">
               <h1 className="pt-5">Bonjour, je suis John Doe</h1>

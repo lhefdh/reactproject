@@ -15,7 +15,7 @@ function App() {
     name:"john doe",
     address1: "40 rue laure diebold",
     address2: "69009 lyon, france",
-    telephone:"téléphone : 06 20 30 40 50",
+    phone:"06 20 30 40 50",
   }
 
   let homePath="/pages/";
@@ -32,7 +32,7 @@ function App() {
         <Route path="/pages/Services" element={<Services />} />
         <Route path="/pages/Portfolio" element={<Portfolio />} />
         <Route path="/pages/Blog" element={<Blog />} />
-        <Route path="/pages/Contact" element={<Contact />} />
+        <Route path="/pages/Contact" element={<Contact personalData={personalData}/>} />
         <Route path="/pages/LegalNotices" element={<LegalNotices />} />
         <Route path="/pages/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />

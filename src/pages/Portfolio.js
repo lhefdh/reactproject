@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from '../components/Banner';
 import PageTitle from '../components/PageTitle';
 import '../style.css';
 import freshFood from'../img/portfolio/fresh-food.jpg';
@@ -14,7 +15,7 @@ export default function Portfolio() {
     return (
       <div id="portfolio" className="bg-white d-flex flex-column justify-content-center align-items-center">
         
-        
+        <Banner/>
         <PageTitle  id={2}/>
 
         <div className="m-5">

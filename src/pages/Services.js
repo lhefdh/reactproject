@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from '../components/Banner';
 import PageTitle from '../components/PageTitle';
 import '../style.css';
 
@@ -10,7 +11,7 @@ export default function Services() {
 
     return (
       <div id="services" className="bg-white d-flex flex-column justify-content-center align-items-center">
-        
+        <Banner/>
         <PageTitle  id={1}/>
 
         <div className="m-5">

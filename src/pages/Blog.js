@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from '../components/Banner';
 import PageTitle from '../components/PageTitle';
 import '../style.css';
 import coder from'../img/blog/coder.jpg';
@@ -18,7 +19,7 @@ export default function Blog() {
     return (
       <div id="blog" className="bg-white d-flex flex-column justify-content-center align-items-center">
         
-        
+        <Banner/>
         <PageTitle  id={3}/>
 
         <div className="m-5">

@@ -14,7 +14,7 @@ export default function Footer(props) {
                     <h5 className="text-capitalize p-0 m-0">{props.personalData.name}</h5>
                     <p className="text-capitalize p-0 m-0">{props.personalData.address1}</p>
                     <p className="text-capitalize p-0 m-0">{props.personalData.address2}</p>
-                    <p className="text-capitalize p-0 m-0">{props.personalData.telephone}</p>
+                    <p className="text-capitalize p-0 m-0">Téléphone : {props.personalData.phone}</p>
                     <ul className="p-1 m-1">
                         <i class="fa-brands fa-github pe-3 fs-2"/>
                         <i class="fa-brands fa-square-twitter pe-3 fs-2"/>
