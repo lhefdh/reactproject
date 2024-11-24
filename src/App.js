@@ -16,6 +16,9 @@ function App() {
     address1: "40 rue laure diebold",
     address2: "69009 lyon, france",
     phone:"06 20 30 40 50",
+    email: "john.doe@gmail.com",
+    title: "étudiant du CEF",
+    imgSource: "Pixabay",
   }
 
   let homePath="/pages/";
@@ -33,7 +36,7 @@ function App() {
         <Route path="/pages/Portfolio" element={<Portfolio />} />
         <Route path="/pages/Blog" element={<Blog />} />
         <Route path="/pages/Contact" element={<Contact personalData={personalData}/>} />
-        <Route path="/pages/LegalNotices" element={<LegalNotices />} />
+        <Route path="/pages/LegalNotices" element={<LegalNotices personalData={personalData}/>} />
         <Route path="/pages/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

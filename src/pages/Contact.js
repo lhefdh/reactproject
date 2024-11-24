@@ -13,9 +13,8 @@ export default function Contact(props) {
     backgroundImage: `url(${contactBG})`,
     height:"100vh",
     width:"auto",
-  
     fontSize: "70px",
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
+    backgroundColor: "rgba (0, 105, 255, 0.5)",
   }
   
   return (
