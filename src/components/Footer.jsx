@@ -28,7 +28,7 @@ export default function Footer(props) {
                         <li className="ps-1"><Link className="nav-link" to="../pages/Contact">kjygkhg</Link></li>
                         <li className="ps-1"><Link className="nav-link" to="../pages/Services">Services</Link></li>
                         <li className="ps-1"><Link className="nav-link" to="../pages/Contact">Me contacter</Link></li>
-                        <li className="ps-1"><Link className="nav-link" to="../pages/Contact">Mentions légales</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to="../pages/LegalNotices">Mentions légales</Link></li>
                     </ul>
                 </div>
                 <div className="col-lg-3 p-3">
