@@ -13,15 +13,15 @@ export default function Portfolio() {
 
 
     return (
-      <div id="portfolio" className="bg-white d-flex flex-column justify-content-center align-items-center">
+      <div id="portfolio" className="bg-white d-flex flex-column justify-content-center">
         
         <Banner/>
         <PageTitle  id={2}/>
 
-        <div className="m-5">
-          <div className="d-flex justify-content-center mx-1">
+        <div id="portfolioCards" className="m-5">
+          <div className="d-flex flex-wrap justify-content-start mx-1">
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={freshFood} class="card-img-top" alt="Fresh-Food"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-center pt-3  mx-1">
@@ -35,7 +35,7 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={restaurantJaponais} class="card-img-top" alt="Restaurant japonais"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-center pt-3  mx-1">
@@ -49,7 +49,7 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={espaceBienEtre} class="card-img-top" alt="Espace bien-être"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-center pt-3  mx-1">
