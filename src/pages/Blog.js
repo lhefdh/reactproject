@@ -22,10 +22,10 @@ export default function Blog() {
         <Banner/>
         <PageTitle  id={3}/>
 
-        <div className="m-5">
+        <div id="lastArticles" className="m-5">
           <div className="d-flex justify-content-center flex-wrap mx-1">
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={coder} class="card-img-top" alt="Fresh-Food"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
@@ -39,7 +39,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={croissance} class="card-img-top" alt="Restaurant japonais"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
@@ -53,7 +53,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={google} class="card-img-top" alt="Espace bien-être"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
@@ -67,7 +67,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={screens} class="card-img-top" alt="Espace bien-être"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
@@ -81,7 +81,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={seo} class="card-img-top" alt="Espace bien-être"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
@@ -95,7 +95,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="col-lg-4 p-3">
+            <div className="col-lg-4 col-md-6 col-sm-12 p-3">
               <div className="card h-100">
                 <img src={technos} class="card-img-top" alt="Espace bien-être"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">

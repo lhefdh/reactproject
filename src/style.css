@@ -59,7 +59,8 @@ p {
 }
 li::marker {
     color: blue;
-  }
+}
+
 
 .active {
     color: white !important;
@@ -67,6 +68,40 @@ li::marker {
 .card-footer{
   background-color: #EEE;
 }
+.card-text{
+  font-stretch: condensed;
+}
 
 
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 2.125rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 1.250rem;
+  }
+  h4{
+    font-size: 1.125rem;
+  }
+  h5{
+    font-size: 1rem;
+  }
+}  
+@media screen and (max-width: 576px) {
+  h1{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1.125rem;
+  }
+  h3{
+    font-size: 1.125rem;
+  }
+  .footerContainer{
+    width:100%;
+  }
+}  
 
