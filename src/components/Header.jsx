@@ -15,10 +15,13 @@ export default function Header(props) {
 
     return (
      
-    <nav className="navbar navbar-expand-lg bg-dark text-uppercase fixed-top">
+    <nav className="navbar navbar-expand-lg bg-dark navbar-dark text-uppercase fixed-top">
         <div className="container-fluid ms-5">
             <a className="navbar-brand text-white" href="#">john doe</a>
-            <div className="d-flex justify-content-end me-5" id="navbarSupportedContent">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="flex-d justify-content-end collapse navbar-collapse me-5" id="navbarSupportedContent">
                 <ul className="navbar-nav mb-2 mb-lg-0 text-secondary">
                     <li className="nav-item">
                         <Link className={homeLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/">accueil</Link>
