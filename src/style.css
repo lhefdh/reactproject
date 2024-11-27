@@ -57,6 +57,10 @@ p {
 #Footer ul{
     list-style-type: ">";
 }
+.footer-scrolled{
+  display:none;
+}
+
 li::marker {
     color: blue;
 }

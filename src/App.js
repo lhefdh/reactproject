@@ -22,15 +22,18 @@ function App() {
     imgSource: "Pixabay",
   }
 
-  let homePath="/pages/";
-  let servicesPath="/pages/Services";
-  let portfolioPath="/pages/Portfolio";
-  let blogPath="/pages/Blog";
-  let contactPath="/pages/Contact";
+  let pagesPaths={
+    homePath:"/pages/",
+    servicesPath:"/pages/Services",
+    portfolioPath:"/pages/Portfolio",
+    blogPath:"/pages/Blog",
+    contactPath:"/pages/Contact",
+  }
+  
 
   return (
     <div className="App">
-      <Header homePathInHeader={homePath} servicesPathInHeader={servicesPath} portfolioPathInHeader={portfolioPath} blogPathInHeader={blogPath} contactPathInHeader={contactPath}/>
+      <Header pagesPaths={pagesPaths}/>
       <Routes>
         <Route path="/pages/" element={<Home />} />
         <Route path="/pages/Services" element={<Services />} />
@@ -41,7 +44,7 @@ function App() {
         <Route path="/pages/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer personalData={personalData}/>
+      <Footer personalData={personalData} pagesPaths={pagesPaths}/>
     </div>
   );
 }

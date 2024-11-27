@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLocation} from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
 import { useState } from "react";
@@ -8,14 +9,41 @@ export default function Footer(props) {
 
     const [showTopArrow, setShowTopArrow] = useState(false);
 
-    
+    let location = useLocation();
       
     window.addEventListener('scroll', function() {
-      if (window.scrollY >= 250) {
-        setShowTopArrow(true)
-      } else {
-        setShowTopArrow(false);
-      }
+       if (location.pathname === props.pagesPaths.servicesPath) {
+        if (window.scrollY >= 250) {
+            setShowTopArrow(true)
+        } else {
+            setShowTopArrow(false);
+        }
+       } else if (location.pathname === props.pagesPaths.portfolioPath) {
+        if (window.scrollY >= 450) {
+            setShowTopArrow(true)
+        } else {
+            setShowTopArrow(false);
+        }
+       } else if (location.pathname === props.pagesPaths.blogPath) {
+        if (window.scrollY >= 950) {
+            setShowTopArrow(true)
+        } else {
+            setShowTopArrow(false);
+        }
+       } else if (location.pathname === props.pagesPaths.contactPath) {
+        if (window.scrollY >= 1050) {
+            setShowTopArrow(true)
+        } else {
+            setShowTopArrow(false);
+        }
+       } else {
+        if (window.scrollY >= 1050) {
+            setShowTopArrow(true)
+        } else {
+            setShowTopArrow(false);
+        }
+       } 
+
     });
    
 
