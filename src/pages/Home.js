@@ -87,7 +87,7 @@ export default function Home() {
                 <hr className="hr border-primary border-2 w-100"/>
                 <p className="pt-3 text-start">Passionné par l'informatique et les nouvelles technologies, j'ai vu une formation d'<strong>intégrateur-développeur web</strong> au CEF. Au cours de cette formation, j'ai pu acquérir des bases solides pour travailler dans le domaine du <strong>développement web.</strong><br/>
                     Basé à Lyon, je suis en recherche d'une alternance au sein d'une agence digitale pour consolider ma formation de <strong>développeur web full stack.</strong><br/>
-                    J'accorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.
+                    J'accorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.   
                 </p>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 p-3 d-flex flex-column align-items-start justify-content-start">
