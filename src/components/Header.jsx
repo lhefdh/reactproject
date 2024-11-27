@@ -7,11 +7,11 @@ export default function Header(props) {
 
     let location = useLocation();
     
-    const homeLinkIsActive = (location.pathname === props.homePathInHeader);
-    const servicesLinkIsActive = (location.pathname === props.servicesPathInHeader);
-    const portfolioLinkIsActive = (location.pathname === props.portfolioPathInHeader);
-    const blogLinkIsActive = (location.pathname === props.blogPathInHeader);
-    const contactLinkIsActive = (location.pathname === props.contactPathInHeader);
+    const homeLinkIsActive = (location.pathname === props.pagesPaths.homePath);
+    const servicesLinkIsActive = (location.pathname === props.pagesPaths.servicesPath);
+    const portfolioLinkIsActive = (location.pathname === props.pagesPaths.portfolioPath);
+    const blogLinkIsActive = (location.pathname === props.pagesPaths.blogPath);
+    const contactLinkIsActive = (location.pathname === props.pagesPaths.contactPath);
 
     return (
      
