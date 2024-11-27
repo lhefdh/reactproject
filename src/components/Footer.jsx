@@ -1,11 +1,22 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
+import { useState } from "react";
 import '../style.css';
 
 export default function Footer(props) {
 
+    const [showTopArrow, setShowTopArrow] = useState(false);
 
+    
+      
+    window.addEventListener('scroll', function() {
+      if (window.scrollY >= 250) {
+        setShowTopArrow(true)
+      } else {
+        setShowTopArrow(false);
+      }
+    });
    
 
 
@@ -50,7 +61,7 @@ export default function Footer(props) {
                         <li className="ps-1"><HashLink className="nav-link" to="../pages/Blog#lastArticles">Se positionner sur Google</HashLink></li>
                     </ul>
                 </div>
-                <div  className="text-center" style={{color:"blue"}}><HashLink className="nav-link" to="#top"><i class="fa-sharp fa-solid fa-arrow-up"/><br/>Retour en haut</HashLink></div>
+                <div id="topArrow" className={showTopArrow? "text-center":"footer-scrolled text-center"} style={{color:"blue"}}><HashLink className="nav-link" to="#top"><i class="fa-sharp fa-solid fa-arrow-up"/><br/>Retour en haut</HashLink></div>
             </div>
             <div className="mb-3 p-3 bg-dark text-white text-center"><p className="text-white">&#169; Designed by <span className="text-capitalize">{props.personalData.name}</span></p></div>
 

@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 
 function App() {
+  
   let personalData={
     name:"john doe",
     address1: "40 rue laure diebold",
