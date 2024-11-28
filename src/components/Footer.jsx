@@ -19,31 +19,30 @@ export default function Footer(props) {
             setShowTopArrow(false);
         }
        } else if (location.pathname === props.pagesPaths.portfolioPath) {
-        if (window.scrollY >= 450) {
+        if (window.scrollY >= 500) {
             setShowTopArrow(true)
         } else {
             setShowTopArrow(false);
         }
        } else if (location.pathname === props.pagesPaths.blogPath) {
-        if (window.scrollY >= 950) {
+        if (window.scrollY >= 1200) {
             setShowTopArrow(true)
         } else {
             setShowTopArrow(false);
         }
        } else if (location.pathname === props.pagesPaths.contactPath) {
-        if (window.scrollY >= 1050) {
+        if (window.scrollY >= 300) {
             setShowTopArrow(true)
         } else {
             setShowTopArrow(false);
         }
        } else {
-        if (window.scrollY >= 1050) {
+        if (window.scrollY >= 1150) {
             setShowTopArrow(true)
         } else {
             setShowTopArrow(false);
         }
        } 
-
     });
    
 
@@ -89,7 +88,7 @@ export default function Footer(props) {
                         <li className="ps-1"><HashLink className="nav-link" to="../pages/Blog#lastArticles">Se positionner sur Google</HashLink></li>
                     </ul>
                 </div>
-                <div id="topArrow" className={showTopArrow? "text-center":"footer-scrolled text-center"} style={{color:"blue"}}><HashLink className="nav-link" to="#top"><i class="fa-sharp fa-solid fa-arrow-up"/><br/>Retour en haut</HashLink></div>
+                <div className={showTopArrow? "text-center":"footer-scrolled text-center"} style={{color:"blue"}}><HashLink className="nav-link" to="#top"><button id="backToTop" type="button" class="btn btn-outline-dark">Retour en haut</button></HashLink></div>
             </div>
             <div className="mb-3 p-3 bg-dark text-white text-center"><p className="text-white">&#169; Designed by <span className="text-capitalize">{props.personalData.name}</span></p></div>
 

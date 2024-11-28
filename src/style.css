@@ -32,6 +32,9 @@ p {
   strong{
     color:black
   }
+  a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
   .border{
     border-color:blue !important;
   }
@@ -60,10 +63,14 @@ p {
 .footer-scrolled{
   display:none;
 }
+#backToTop:hover {
+  background-color: #298eff;
+}
 
 li::marker {
     color: blue;
 }
+
 
 
 .active {
@@ -76,6 +83,10 @@ li::marker {
   font-stretch: condensed;
 }
 
+
+.card-body:hover > i {
+  color: #cde1f8 !important;
+}
 
 @media screen and (max-width: 768px) {
   h1{
