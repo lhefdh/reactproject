@@ -13,13 +13,13 @@ import technos from'../img/blog/technos.png';
 
 
 
-export default function Blog() {
+export default function Blog(props) {
 
 
     return (
       <div id="blog" className="bg-white d-flex flex-column justify-content-center align-items-center">
         
-        <Banner/>
+        <Banner bannerSrc={props.bannerSrc}/>
         <PageTitle  id={3}/>
 
         <div id="lastArticles" className="m-5">

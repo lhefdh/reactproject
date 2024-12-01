@@ -6,12 +6,13 @@ import '../style.css';
 
 
 
-export default function Services() {
+export default function Services(props) {
 
 
     return (
+   
       <div id="services" className="bg-white d-flex flex-column justify-content-center align-items-center">
-        <Banner/>
+        <Banner bannerSrc={props.bannerSrc}/>
         <PageTitle  id={1}/>
 
         <div className="m-5">
@@ -49,6 +50,8 @@ export default function Services() {
         </div>
       
       </div>
+ 
+      
 
     );
 }

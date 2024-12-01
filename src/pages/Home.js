@@ -1,14 +1,13 @@
 import React from 'react';
 import {useState} from 'react';
 import '../style.css';
-import heroBackGround from '../img/hero-bg.jpg';
 import aboutImage from '../img/john-doe-about.jpg';
 
 
     
 
 
-export default function Home() {
+export default function Home(props) {
 
   const[skills, setSkills]= useState([
     {
@@ -57,22 +56,16 @@ export default function Home() {
       }
     }
   ])
-  const bgStyle = {
-    backgroundImage: `url(${heroBackGround})`,
-    height:"100vh",
-    width:"auto",
-    paddingTop: "30vh",
-    fontSize: "70px",
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-  }
+  
+
   
   
 
     return (
-      <div id="home" className="bg-white">
-        <div  className="bg-image shadow-2-strong" style={bgStyle}>
+      <div className="bg-white">
+        <div  id="home" className="container-fluid bg-image shadow-2-strong" style={props.homeBackgroundUrl} >
           <div className="mask">
-          <div className="container pt-5 d-flex flex-column align-items-center justify-content-center align-content-center text-center text-white">
+            <div className="container pt-5 d-flex flex-column align-items-center justify-content-center align-content-center text-center text-white">
               <h1 className="pt-5">Bonjour, je suis John Doe</h1>
               <h5 className="pt-3">Développeur Web Full Stack</h5>
               <a className="btn btn-outline-light btn-lg m-4" data-mdb-ripple-init href="#" role="button"
@@ -104,6 +97,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </div>
        
     
