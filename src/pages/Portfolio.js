@@ -9,13 +9,13 @@ import espaceBienEtre from '../img/portfolio/espace-bien-etre.jpg';
 
 
 
-export default function Portfolio() {
+export default function Portfolio(props) {
 
 
     return (
       <div id="portfolio" className="bg-white d-flex flex-column justify-content-center">
         
-        <Banner/>
+        <Banner bannerSrc={props.bannerSrc}/>
         <PageTitle  id={2}/>
 
         <div id="portfolioCards" className="m-5">

@@ -20,7 +20,7 @@ export default function Contact(props) {
     height:"100vh",
     width:"auto",
     fontSize: "70px",
-    backgroundColor: "rgba (0, 105, 255, 0.5)",
+    backgroundColor: "rgba (0, 105, 255, 0.5) !important",
   }
   function handleFormSubmit(event) {
     event.preventDefault();
