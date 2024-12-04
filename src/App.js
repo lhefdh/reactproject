@@ -127,7 +127,7 @@ function getBackgroundSize(width) {
         <Route path="/pages/Services" element={<Services bannerSrc={assets.bannerSrc.src}/>} />
         <Route path="/pages/Portfolio" element={<Portfolio bannerSrc={assets.bannerSrc.src}/>} />
         <Route path="/pages/Blog" element={<Blog bannerSrc={assets.bannerSrc.src}/>} />
-        <Route path="/pages/Contact" element={<Contact personalData={assets}/>} />
+        <Route path="/pages/Contact" element={<Contact personalData={personalData}/>} />
         <Route path="/pages/LegalNotices" element={<LegalNotices personalData={personalData}/>} />
         <Route path="/pages/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />

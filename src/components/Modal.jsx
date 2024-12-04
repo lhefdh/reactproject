@@ -2,13 +2,13 @@ export default function Modal({  errorMessage = null }) {
   
     return (
   
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+        <div className="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+            <div className="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div className="modal-header">
                         <button type="button" className="btn-close fs-6" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                <div class="modal-body">
+                <div className="modal-body">
                     <h3 className="text-center" style={{ color: errorMessage ? "red" : "green" }}>
                             {errorMessage != null
                             ? errorMessage
@@ -16,7 +16,7 @@ export default function Modal({  errorMessage = null }) {
                     </h3>
                 </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
