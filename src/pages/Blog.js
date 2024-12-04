@@ -17,8 +17,8 @@ export default function Blog(props) {
 
 
     return (
-      <div id="blog" className="bg-white d-flex flex-column justify-content-center align-items-center">
-        
+      <div id="blog" className="bg-white d-flex flex-column justify-content-center">
+ 
         <Banner bannerSrc={props.bannerSrc}/>
         <PageTitle  id={3}/>
 
@@ -87,7 +87,7 @@ export default function Blog(props) {
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
                   <h2 className="card-title">Techniques de référencement</h2>
                   <p className="card-text text-center">Réalisation d'un site avec commande en ligne pour un praticien de bien être.</p>
-                  <button type="button" class="btn btn-primary">Lire la suite</button>
+                  <button type="button" className="btn btn-primary">Lire la suite</button>
                 </div>
                 <div className="card-footer">
                   <p>Publié le 30 juillet 2022 2022</p>

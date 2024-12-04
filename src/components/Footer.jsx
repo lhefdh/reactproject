@@ -57,9 +57,9 @@ export default function Footer(props) {
                     <p className="text-capitalize p-0 m-0">{props.personalData.address2}</p>
                     <p className="text-capitalize p-0 m-0">Téléphone : {props.personalData.phone}</p>
                     <ul className="p-1 m-1">
-                        <i class="fa-brands fa-github pe-3 fs-2"/>
-                        <i class="fa-brands fa-square-twitter pe-3 fs-2"/>
-                        <i class="fa-brands fa-linkedin pe-3 fs-2"/>
+                        <li class="fa-brands fa-github pe-3 fs-2"/>
+                        <li class="fa-brands fa-square-twitter pe-3 fs-2"/>
+                        <li class="fa-brands fa-linkedin pe-3 fs-2"/>
                     </ul>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">
@@ -88,7 +88,7 @@ export default function Footer(props) {
                         <li className="ps-1"><HashLink className="nav-link" to="../pages/Blog#lastArticles">Se positionner sur Google</HashLink></li>
                     </ul>
                 </div>
-                <div className={showTopButton? "text-center":"footer-scrolled text-center"} style={{color:"blue"}}><HashLink className="nav-link" to="#top"><button id="backToTop" type="button" class="btn btn-outline-dark">Retour en haut</button></HashLink></div>
+                <div className={showTopButton? "text-center":"footer-scrolled text-center"} style={{color:"blue"}}><HashLink className="nav-link" to="#top"><div id="backToTop" className="btn btn-outline-dark">Retour en haut</div></HashLink></div>
             </div>
             <div className="mb-3 p-3 bg-dark text-white text-center"><p className="text-white">&#169; Designed by <span className="text-capitalize">{props.personalData.name}</span></p></div>
 

@@ -13,7 +13,7 @@ export default function Home(props) {
     {
       id: 1,
       name: "html5",
-      rate:"90%",
+      rate:"90",
       skillStyle:{
         backgroundColor: "rgb(135, 206, 235)",
         width: "90%",
@@ -22,7 +22,7 @@ export default function Home(props) {
     {
       id: 2,
       name: "css3",
-      rate:"50%",
+      rate:"50",
       skillStyle:{
         backgroundColor: "rgb(175, 225, 175)",
         width: "50%",
@@ -31,7 +31,7 @@ export default function Home(props) {
     {
       id: 3,
       name: "javascript",
-      rate:"70%",
+      rate:"70",
       skillStyle:{
         backgroundColor: "rgb(228, 208, 10)",
         width: "70%",
@@ -40,7 +40,7 @@ export default function Home(props) {
     {
       id: 4,
       name: "php",
-      rate:"60%",
+      rate:"60",
       skillStyle:{
         backgroundColor: "rgb(255, 87, 51)",
         width: "60%",
@@ -49,7 +49,7 @@ export default function Home(props) {
     {
       id: 5,
       name: "react",
-      rate:"50%",
+      rate:"50",
       skillStyle:{
         backgroundColor: "rgb(144, 12, 63)",
         width: "50%",
@@ -88,7 +88,7 @@ export default function Home(props) {
               <h3 className="pt-3">Mes Compétences</h3>
               {skills.map((skill) => ( 
                 <div className="w-100 pb-3" key={skill.id}>
-                  <p className="text-uppercase text-start p-0 m-0">{skill.name} {skill.rate}</p>
+                  <p className="text-uppercase text-start p-0 m-0">{skill.name} {skill.rate}%</p>
                   <div className="progress w-100" role="progressbar" aria-label="Info example" aria-valuenow={skill.rate} aria-valuemin="0" aria-valuemax="100">
                     <div style={skill.skillStyle} className="progress-bars"  ></div>
                   </div>
