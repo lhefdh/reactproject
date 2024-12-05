@@ -1,5 +1,4 @@
 
-
 p {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 400;
@@ -65,6 +64,7 @@ li::marker {
 }
 #backToTop:hover {
   background-color: #298eff;
+  border: none;
 }
 
 
@@ -78,6 +78,9 @@ li::marker {
   background-size: cover;
 }
 
+#welcome-Btn:hover {
+  color: black !important;
+}
 
 .active {
     color: white !important;
@@ -85,8 +88,6 @@ li::marker {
 .card-footer{
   background-color: #EEE;
 }
-
-
 
 .card-body:hover > i {
   color: #cde1f8 !important;

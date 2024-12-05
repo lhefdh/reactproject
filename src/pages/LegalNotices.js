@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import PageTitle from '../components/PageTitle';
 
 export default function LegalNotices(props) {
  
   return (
     <div id="legalNotices" className="container-fluid bg-image w-100 p-5 d-flex flex-column justify-content-start align-items-center">
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
    
       <div className="mt-5 my-5 p-3 bg-white w-100 ">
         <PageTitle  id={4}/>
