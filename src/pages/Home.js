@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import {HashLink} from 'react-router-hash-link';
 import '../style.css';
 import aboutImage from '../img/john-doe-about.jpg';
 
@@ -68,8 +69,8 @@ export default function Home(props) {
             <div className="container pt-5 d-flex flex-column align-items-center justify-content-center align-content-center text-center text-white">
               <h1 className="pt-5">Bonjour, je suis John Doe</h1>
               <h5 className="pt-3">Développeur Web Full Stack</h5>
-              <a className="btn btn-outline-light btn-lg m-4" data-mdb-ripple-init href="#" role="button"
-                rel="nofollow" target="_blank">En savoir plus</a>
+              <HashLink id="welcome-Btn" className="btn btn-outline-light btn-lg m-4" data-mdb-ripple-init to="#apropos" role="button"
+                rel="nofollow" >En savoir plus</HashLink>
             </div>
           </div>
         </div>

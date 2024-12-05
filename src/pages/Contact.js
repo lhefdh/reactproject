@@ -17,10 +17,8 @@ export default function Contact({personalData}) {
   });
   const bgStyle = {
     backgroundImage: `url(${contactBG})`,
-    height:"100vh",
-    width:"auto",
-    fontSize: "70px",
-    backgroundColor: "rgba (0, 105, 255, 0.5) !important",
+    backgroundColor: 'rgba(0, 105, 255, 0.5)',
+    backgroundBlendMode: 'multiply',
   }
   function handleFormSubmit(event) {
     event.preventDefault();
