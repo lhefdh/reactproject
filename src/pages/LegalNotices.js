@@ -22,10 +22,10 @@ export default function LegalNotices(props) {
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <h2 className="text-capitalize">{props.personalData.name}</h2>
-              <address><p className="text-capitalize p-0 m-0"><i class="fa-sharp fa-solid fa-location-dot fs-6"/> {props.personalData.address1}<br/>{props.personalData.address2}</p>
-              <p className="text-primary" ><i class="fa-solid fa-mobile-screen "/> {props.personalData.phone}<br/>
-              <i class="fa-solid fa-envelope"/> {props.personalData.email}</p></address>
+              <h2 className="text-capitalize">{props.profileData.name}</h2>
+              <address><p className="text-capitalize p-0 m-0"><i class="fa-sharp fa-solid fa-location-dot fs-6"/> {props.profileData.address1}<br/>{props.profileData.address2}</p>
+              <p className="text-primary" ><i class="fa-solid fa-mobile-screen "/> {props.profileData.phone}<br/>
+              <i class="fa-solid fa-envelope"/> {props.profileData.email}</p></address>
               </div>
             </div>
           </div>
@@ -51,8 +51,8 @@ export default function LegalNotices(props) {
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <h2 className="text-capitalize">crédits</h2>
-                <p>Site développé par <span className="text-capitalize">{props.personalData.name}</span>, {props.personalData.title}.</p>
-                <p>Les images libres de droits sont issues du site <span className="text-primary">{props.personalData.imgSource}</span>.</p>
+                <p>Site développé par <span className="text-capitalize">{props.profileData.name}</span>, {props.profileData.title}.</p>
+                <p>Les images libres de droits sont issues du site <span className="text-primary">{props.profileData.imgSource}</span>.</p>
               </div>
             </div>
           </div>
