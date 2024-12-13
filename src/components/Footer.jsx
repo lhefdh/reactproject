@@ -10,7 +10,8 @@ export default function Footer(props) {
     const [showTopButton, setShowTopButton] = useState(false);
 
     let location = useLocation();
-      
+    
+    // Faire apparaitre le bouton 'TOP' à partir d'une certaine hauteur (ScrollY)
     window.addEventListener('scroll', function() {
        if (location.pathname === props.pagesPaths.servicesPath) {
         if (window.scrollY >= 250) {
@@ -52,14 +53,14 @@ export default function Footer(props) {
         <div id="Footer">
             <div className="d-flex flex-wrap text-start justify-content-center p-5">
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">
-                    <h5 className="text-capitalize">{props.personalData.name}</h5>
-                    <p className="text-capitalize p-0 m-0">{props.personalData.address1}</p>
-                    <p className="text-capitalize p-0 m-0">{props.personalData.address2}</p>
-                    <p className="text-capitalize p-0 m-0">Téléphone : {props.personalData.phone}</p>
+                    <h5 className="text-capitalize">{props.profileData.name}</h5>
+                    <p className="text-capitalize p-0 m-0">{props.profileData.address1}</p>
+                    <p className="text-capitalize p-0 m-0">{props.profileData.address2}</p>
+                    <p className="text-capitalize p-0 m-0">Téléphone : {props.profileData.phone}</p>
                     <ul className="p-1 m-1">
-                        <li class="fa-brands fa-github pe-3 fs-2"/>
-                        <li class="fa-brands fa-square-twitter pe-3 fs-2"/>
-                        <li class="fa-brands fa-linkedin pe-3 fs-2"/>
+                        <li className="fa-brands fa-github pe-3 fs-2"/>
+                        <li className="fa-brands fa-square-twitter pe-3 fs-2"/>
+                        <li className="fa-brands fa-linkedin pe-3 fs-2"/>
                     </ul>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">
@@ -90,7 +91,7 @@ export default function Footer(props) {
                 </div>
                 <div className={showTopButton? "text-center":"footer-scrolled text-center"} style={{color:"blue"}}><HashLink className="nav-link" to="#top"><div id="backToTop" className="btn btn-outline-dark">Retour en haut</div></HashLink></div>
             </div>
-            <div className="mb-3 p-3 bg-dark text-white text-center"><p className="text-white">&#169; Designed by <span className="text-capitalize">{props.personalData.name}</span></p></div>
+            <div className="mb-3 p-3 bg-dark text-white text-center"><p className="text-white">&#169; Designed by <span className="text-capitalize">{props.profileData.name}</span></p></div>
 
         </div>
 

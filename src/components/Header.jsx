@@ -6,7 +6,7 @@ import '../style.css';
 export default function Header(props) {
 
     let location = useLocation();
-    
+    // variables utilisées pour pour vérifier la correspondance entre  le lien dans la navBar et la page sur laquelle on se situe dans le but de créer un effet sur le lien actif
     const homeLinkIsActive = (location.pathname === props.pagesPaths.homePath);
     const servicesLinkIsActive = (location.pathname === props.pagesPaths.servicesPath);
     const portfolioLinkIsActive = (location.pathname === props.pagesPaths.portfolioPath);
