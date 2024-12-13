@@ -21,9 +21,9 @@ export default function Portfolio({ImgSrc, profileData}) {
               <div className="card h-100">
                 {/* le nom de l'image sera définit parmi les images importées selon l'index de lelement */}
                 <img src={(index===0) ? PortfolioCEF : (index===1) ? Maquette :(index===2) ? ReactProject :''} className="card-img-top" alt={project.name}/>
-                <div className="card-body d-flex flex-column justify-content-start align-items-center pt-3 mx-1">
+                <div className="card-body d-flex flex-column align-items-center pt-3 mx-1">
                   <h2 className="card-title text-uppercase">{project.name}</h2>
-                  <p className="card-text text-center">{project.description}</p>
+                  <p className="card-text align-self-start">{project.description}</p>
                   <button type="button" className="btn btn-outline-primary">Voir</button>
                 </div>
                 <div className="card-footer">

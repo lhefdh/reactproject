@@ -21,7 +21,7 @@ export default function Blog({ImgSrc, profileData}) {
                 <img src={article.imgSrc} className="card-img-top" alt="Fresh-Food"/>
                 <div className="card-body d-flex flex-column justify-content-start align-items-start pt-3  mx-1">
                   <h2 className="card-title">{article.title}</h2>
-                  <p className="card-text text-center">{article.description}</p>
+                  <p className="card-text">{article.description}</p>
                   <button type="button" className="btn btn-primary">Lire la suite</button>
                 </div>
                 <div className="card-footer">
