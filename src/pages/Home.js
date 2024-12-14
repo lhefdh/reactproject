@@ -12,7 +12,7 @@ export default function Home({homeBackgroundUrl, profileData}) {
             <div className="container pt-5 d-flex flex-column align-items-center justify-content-center align-content-center text-center text-white">
               <h1 className="pt-5">Bonjour, je suis John Doe</h1>
               <h5 className="pt-3">Développeur Web Full Stack</h5>
-              <HashLink id="welcome-Btn" className="btn btn-outline-light btn-lg m-4" data-mdb-ripple-init to="#apropos" role="button"
+              <HashLink id="welcome-Btn" className="btn btn-outline-light btn-lg m-4"  to="#apropos" role="button"
                 rel="nofollow" >En savoir plus</HashLink>
             </div>
           </div>

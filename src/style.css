@@ -1,6 +1,9 @@
-
+@font-face {
+  font-family: "Nunito Sans";
+  src: url(../public/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf), url(../public/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
 p {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Nunito Sans", Verdana, Tahoma, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
@@ -10,7 +13,7 @@ p {
       "YTLC" 500;
   }
   h1, h2, h3, strong  {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Nunito Sans", Verdana, Tahoma, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-variation-settings:
@@ -72,7 +75,7 @@ li::marker {
   
   height:100vh;
   width:auto;
-  padding-top: 20vh;
+  padding-top: 10vh;
   font-size: 70px;
   background-color: rgba(0, 0, 0, 0.3);
   background-size: cover;
@@ -92,6 +95,10 @@ li::marker {
 .card-body:hover > i {
   color: #cde1f8 !important;
 }
+#notFoundImg {
+  max-width: 30vw;
+}
+
 
 
 

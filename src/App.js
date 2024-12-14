@@ -1,6 +1,7 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import {useState, useEffect} from 'react';
+import {useLocation} from "react-router-dom";
 import Header from './components/Header'
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -30,36 +31,42 @@ const [profileData, setProfileData] = useState({
     imgSource: "Pixabay",
     projects:[],
     articles:[{
+      id:0,
       title: "Coder son site en HTML/CSS",
-      description: "Réalisation d'un site avec commande en ligne.",
-      date:" Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nec elementum dolor.",
+      description: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nec elementum dolor.",
+      date:"Publié le 22 août 2022",
       imgSrc:'../img/blog/coder.jpg',
     },
     {
+      id:1,
       title: "Vendre ses produits sur le web",
       description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       date:"Publié le 20 août 2022",
       imgSrc:'../img/blog/croissance.jpg',
     },
     {
+      id:2,
       title: "Se positionner sur Google",
       description: "Pellentesque placerat bibendum lacus at congue. Vivamus non eros ut mauris accumsan lacinia eu posuere lacus.",
       date:"Publié le 1 août 2022",
       imgSrc:'../img/blog/google.jpg',
     },
     {
+      id:3,
       title: "Coder en Responsive design",
       description: "Phasellus congue quam magna, at gravida est maximus ut, phasellus finibus accumsan nibh nec varius.",
       date:"Publié le 31 juillet 2022",
       imgSrc:'../img/blog/screens.jpg',
     },
     {
+      id:4,
       title: "Techniques de référencement",
       description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
       date:"Publié le 30 juillet 2022",
       imgSrc:'../img/blog/seo.jpg',
     },
     {
+      id:5,
       title: "Apprendre à coder",
       description: "nteger tincidunt vel tortor sit amet gravida. Phasellus accumsan ligula leo, nec dignissim sem bibendum sed.",
       date:"Publié le 12 juillet 2022",
@@ -174,18 +181,21 @@ const [profileData, setProfileData] = useState({
     servicesPath:"/pages/Services",
     portfolioPath:"/pages/Portfolio",
     blogPath:"/pages/Blog",
-    legalNoticesPath:"/pages/legalNotices",
+    legalNoticesPath:"/pages/LegalNotices",
     contactPath:"/pages/Contact",
     notFoundPath:"/pages/404",
   }
-
-
+  let location = useLocation();
+  let notFound = (location.pathname!==pagesPaths.homePath&&location.pathname!==pagesPaths.servicesPath&&
+    location.pathname!==pagesPaths.portfolioPath&&location.pathname!==pagesPaths.blogPath&&
+    location.pathname!==pagesPaths.legalNoticesPath&&location.pathname!==pagesPaths.contactPath);
+  
   return (
     <div className="App">
     
-      <Header pagesPaths={pagesPaths}/>
+      <Header notFound={notFound} pagesPaths={pagesPaths}/>
       <Routes>
-        <Route path={pagesPaths.homePath} element={<Home homeBackgroundUrl={assets.homeBackgroundUrl} profileData={profileData} />} />
+        <Route path={pagesPaths.homePath} element={<Home homeBackgroundUrl={assets.homeBackgroundUrl} profileData={profileData}/>} />
         <Route path={pagesPaths.servicesPath} element={<Services ImgSrc={assets.bannerSrc}/>} />
         <Route path={pagesPaths.portfolioPath} element={<Portfolio ImgSrc={assets.bannerSrc} profileData={profileData}/>} />
         <Route path={pagesPaths.blogPath} element={<Blog ImgSrc={assets.bannerSrc} profileData={profileData}/>} />
@@ -194,7 +204,7 @@ const [profileData, setProfileData] = useState({
         <Route path={pagesPaths.notFoundPath} element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer profileData={profileData} pagesPaths={pagesPaths}/>
+      <Footer notFound={notFound} pagesPaths={pagesPaths} profileData={profileData}/>
     </div>
   );
 }
