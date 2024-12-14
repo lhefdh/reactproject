@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reactproject/static/css/main.369ce3e4.css",
+    "main.js": "/reactproject/static/js/main.d5f20fdb.js",
+    "static/js/453.c44a0ee9.chunk.js": "/reactproject/static/js/453.c44a0ee9.chunk.js",
+    "static/media/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf": "/reactproject/static/media/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.61b71ee93d55d9bddead.ttf",
+    "static/media/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf": "/reactproject/static/media/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.7f24c0208b4b0e7af738.ttf",
+    "static/media/contact-bg.jpg": "/reactproject/static/media/contact-bg.34a5a18c7295144631d0.jpg",
+    "static/media/notFound.png": "/reactproject/static/media/notFound.85a2872cd542d11e9e39.png",
+    "static/media/PortfolioCEF.jpg": "/reactproject/static/media/PortfolioCEF.3d4407915a07bc21527a.jpg",
+    "static/media/maquette.jpg": "/reactproject/static/media/maquette.704fae2a63f26317ed25.jpg",
+    "static/media/ReactProject.jpg": "/reactproject/static/media/ReactProject.4593237d1fc8ffa67523.jpg",
+    "static/media/john-doe-about.jpg": "/reactproject/static/media/john-doe-about.07bb2b3f66fb2530c208.jpg",
+    "index.html": "/reactproject/index.html",
+    "main.369ce3e4.css.map": "/reactproject/static/css/main.369ce3e4.css.map",
+    "main.d5f20fdb.js.map": "/reactproject/static/js/main.d5f20fdb.js.map",
+    "453.c44a0ee9.chunk.js.map": "/reactproject/static/js/453.c44a0ee9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.369ce3e4.css",
+    "static/js/main.d5f20fdb.js"
+  ]
+}
