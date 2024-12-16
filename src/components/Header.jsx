@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {useLocation} from "react-router-dom";
 import '../style.css';
 
-export default function Header({pagesPaths, notFound}) {
+export default function Header({pagesPaths, notFound, name}) {
 
     let location = useLocation();
     // variables utilisées pour pour vérifier la correspondance entre  le lien dans la navBar et la page sur laquelle on se situe dans le but de créer un effet sur le lien actif
@@ -17,7 +17,7 @@ export default function Header({pagesPaths, notFound}) {
     return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark text-uppercase fixed-top">
         <div className="container-fluid ms-5">
-            <Link className="navbar-brand text-white" to="../pages/">john doe</Link>
+            <Link className="navbar-brand text-white" to="../pages/">{name}</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

@@ -11,6 +11,18 @@ import Contact from './pages/Contact';
 import LegalNotices from './pages/LegalNotices';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
+import desktopBackground from './img/hero-bg.jpg';
+import tabletBackground from './img/hero-bg-tablette.jpg';
+import mobileBackground from './img/hero-bg-mobile.jpg';
+import desktopBanner from './img/banner.jpg';
+import tabletBanner from './img/banner-tablette.jpg';
+import mobileBanner from './img/banner-mobile.jpg';
+import coder from './img/blog/coder.jpg';
+import croissance from './img/blog/croissance.jpg';
+import googleImg from './img/blog/google.jpg';
+import screens from './img/blog/screens.jpg';
+import seo from './img/blog/seo.jpg';
+import technos from './img/blog/technos.png';
 
 
 
@@ -35,42 +47,42 @@ const [profileData, setProfileData] = useState({
       title: "Coder son site en HTML/CSS",
       description: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nec elementum dolor.",
       date:"Publié le 22 août 2022",
-      imgSrc:'../img/blog/coder.jpg',
+      imgSrc: coder,
     },
     {
       id:1,
       title: "Vendre ses produits sur le web",
       description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       date:"Publié le 20 août 2022",
-      imgSrc:'../img/blog/croissance.jpg',
+      imgSrc: croissance,
     },
     {
       id:2,
       title: "Se positionner sur Google",
       description: "Pellentesque placerat bibendum lacus at congue. Vivamus non eros ut mauris accumsan lacinia eu posuere lacus.",
       date:"Publié le 1 août 2022",
-      imgSrc:'../img/blog/google.jpg',
+      imgSrc: googleImg,
     },
     {
       id:3,
       title: "Coder en Responsive design",
       description: "Phasellus congue quam magna, at gravida est maximus ut, phasellus finibus accumsan nibh nec varius.",
       date:"Publié le 31 juillet 2022",
-      imgSrc:'../img/blog/screens.jpg',
+      imgSrc: screens,
     },
     {
       id:4,
       title: "Techniques de référencement",
       description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
       date:"Publié le 30 juillet 2022",
-      imgSrc:'../img/blog/seo.jpg',
+      imgSrc: seo,
     },
     {
       id:5,
       title: "Apprendre à coder",
       description: "nteger tincidunt vel tortor sit amet gravida. Phasellus accumsan ligula leo, nec dignissim sem bibendum sed.",
       date:"Publié le 12 juillet 2022",
-      imgSrc:'../img/blog/technos.png',
+      imgSrc: technos,
     },
   ],
     skills:  [{
@@ -136,22 +148,22 @@ const [profileData, setProfileData] = useState({
 
   // declaration des liens du background et de la bannière pour chaque viewport
   const desktopAssets={
-    homeBackgroundUrl:{
-      backgroundImage: 'url(../img/hero-bg.jpg)',  
+    homeBackgroundUrl: {
+      backgroundImage: `url(${desktopBackground})`,
     },
-    bannerSrc: '../img/banner.jpg',
+    bannerSrc: desktopBanner,
   }
   const tabletAssets={
     homeBackgroundUrl:{
-      backgroundImage: 'url(../img/hero-bg-tablette.jpg)',
+      backgroundImage: `url(${tabletBackground})`,
     },
-    bannerSrc: '../img/banner-tablette.jpg',
+    bannerSrc: tabletBanner,
   }
   const mobileAssets={
     homeBackgroundUrl:{
-      backgroundImage: 'url(../img/hero-bg-mobile.jpg)',
+      backgroundImage: `url(${mobileBackground})`,
     },
-    bannerSrc: '../img/banner-mobile.jpg'
+    bannerSrc: mobileBanner,
   }
 
   // changement du State selon la largeur du navigateur
@@ -177,7 +189,7 @@ const [profileData, setProfileData] = useState({
   window.addEventListener("resize", () => {getBackgroundSize(window.innerWidth)});
 
   let pagesPaths={
-    homePath:"/pages/",
+    homePath:"/reactproject",
     servicesPath:"/pages/Services",
     portfolioPath:"/pages/Portfolio",
     blogPath:"/pages/Blog",
@@ -193,7 +205,7 @@ const [profileData, setProfileData] = useState({
   return (
     <div className="App">
     
-      <Header notFound={notFound} pagesPaths={pagesPaths}/>
+      <Header name={profileData.name} notFound={notFound} pagesPaths={pagesPaths}/>
       <Routes>
         <Route path={pagesPaths.homePath} element={<Home homeBackgroundUrl={assets.homeBackgroundUrl} profileData={profileData}/>} />
         <Route path={pagesPaths.servicesPath} element={<Services ImgSrc={assets.bannerSrc}/>} />

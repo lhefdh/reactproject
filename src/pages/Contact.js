@@ -1,13 +1,18 @@
 import React from 'react';
 import { useState } from "react";
-import Modal from '../components/Modal';
 import '../style.css';
 import PageTitle from  '../components/PageTitle';
 import contactBG from '../img/contact-bg.jpg';
+import ModalComponent from '../components/ModalComponent.jsx';
+
 
 
 export default function Contact({profileData}) {
+  
+    
+    
   const [errorMessage, setErrorMessage] = useState(null);
+  const [showModal, setShowModal] = useState(false);
   const [contactInputs, setContactInputs] = useState({
     name: "",
     email: "",
@@ -15,6 +20,8 @@ export default function Contact({profileData}) {
     subject: "",
     textarea: "",
   });
+
+
   const bgStyle = {
     backgroundImage: `url(${contactBG})`,
     backgroundColor: 'rgba(0, 105, 255, 0.5)',
@@ -27,7 +34,18 @@ export default function Contact({profileData}) {
     if (phone.length < 10 || phone.length > 12) {
       setErrorMessage("le format saisi pour le numéro de téléphone est incorrect");
     }
+    setShowModal(true);
   }
+  
+  function handleDivClick() {
+    console.log("div clicked");
+    if (showModal) {
+      setShowModal(false);
+    }
+  }
+
+
+
 
   const btnIsDisabled =
   contactInputs.name === "" ||
@@ -38,7 +56,7 @@ export default function Contact({profileData}) {
 
   
   return (
-    <div id="contact" className="bg-image w-100  h-auto p-5 d-flex flex-column justify-content-start align-items-center" style={bgStyle}>
+    <div id="contact" onClick={handleDivClick} className="bg-image w-100  h-auto p-5 d-flex flex-column justify-content-start align-items-center" style={bgStyle}>
    
         <div className="mt-5 p-3 bg-white w-100 ">
           <PageTitle  id={4}/>
@@ -73,7 +91,7 @@ export default function Contact({profileData}) {
             
           </div>  
         </div>
-        <Modal errorMessage={errorMessage}/> 
+        <ModalComponent errorMessage={errorMessage} show={showModal} closeModal={setShowModal}/> 
     </div>
 
   );
