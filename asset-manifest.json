@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactproject/static/css/main.46378e00.css",
-    "main.js": "/reactproject/static/js/main.a7cd7149.js",
+    "main.css": "/reactproject/static/css/main.369ce3e4.css",
+    "main.js": "/reactproject/static/js/main.7edbc302.js",
     "static/js/453.c44a0ee9.chunk.js": "/reactproject/static/js/453.c44a0ee9.chunk.js",
     "static/media/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf": "/reactproject/static/media/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.61b71ee93d55d9bddead.ttf",
     "static/media/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf": "/reactproject/static/media/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.7f24c0208b4b0e7af738.ttf",
@@ -24,12 +24,12 @@
     "static/media/john-doe-about.jpg": "/reactproject/static/media/john-doe-about.07bb2b3f66fb2530c208.jpg",
     "static/media/banner-mobile.jpg": "/reactproject/static/media/banner-mobile.b968020c0d69804e417c.jpg",
     "index.html": "/reactproject/index.html",
-    "main.46378e00.css.map": "/reactproject/static/css/main.46378e00.css.map",
-    "main.a7cd7149.js.map": "/reactproject/static/js/main.a7cd7149.js.map",
+    "main.369ce3e4.css.map": "/reactproject/static/css/main.369ce3e4.css.map",
+    "main.7edbc302.js.map": "/reactproject/static/js/main.7edbc302.js.map",
     "453.c44a0ee9.chunk.js.map": "/reactproject/static/js/453.c44a0ee9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46378e00.css",
-    "static/js/main.a7cd7149.js"
+    "static/css/main.369ce3e4.css",
+    "static/js/main.7edbc302.js"
   ]
 }
