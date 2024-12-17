@@ -188,32 +188,32 @@ const [profileData, setProfileData] = useState({
   // changement du state si l'écran est redimensionné 
   window.addEventListener("resize", () => {getBackgroundSize(window.innerWidth)});
 
-  let pagesPaths={
-    homePath:"/reactproject/",
-    servicesPath:"/pages/Services",
-    portfolioPath:"/pages/Portfolio",
-    blogPath:"/pages/Blog",
-    legalNoticesPath:"/pages/LegalNotices",
-    contactPath:"/pages/Contact",
-    notFoundPath:"/pages/404",
-  }
+  let pagesPaths=[
+    {path:"/reactproject/", pageName:"accueil"},
+    {path:"/pages/Services", pageName:"services"},
+    {path:"/pages/Portfolio", pageName:"mes réalisations"},
+    {path:"/pages/Blog", pageName:"blog"},
+    {path:"/pages/Contact", pageName:"contact"},
+    {path:"/pages/LegalNotices", pageName:"mentions légales"},
+    {path:"/pages/404", pageName:"Not Found"}
+  ]
   let location = useLocation();
-  let notFound = (location.pathname!==pagesPaths.homePath&&location.pathname!==pagesPaths.servicesPath&&
-    location.pathname!==pagesPaths.portfolioPath&&location.pathname!==pagesPaths.blogPath&&
-    location.pathname!==pagesPaths.legalNoticesPath&&location.pathname!==pagesPaths.contactPath);
+  let notFound = (location.pathname!==pagesPaths[0].path&&location.pathname!==pagesPaths[1].path&&
+    location.pathname!==pagesPaths[2].path&&location.pathname!==pagesPaths[3].path&&
+    location.pathname!==pagesPaths[4].path&&location.pathname!==pagesPaths[5].path);
   
   return (
     <div className="App">
     
       <Header name={profileData.name} notFound={notFound} pagesPaths={pagesPaths}/>
       <Routes>
-        <Route path={pagesPaths.homePath} element={<Home homeBackgroundUrl={assets.homeBackgroundUrl} profileData={profileData}/>} />
-        <Route path={pagesPaths.servicesPath} element={<Services ImgSrc={assets.bannerSrc}/>} />
-        <Route path={pagesPaths.portfolioPath} element={<Portfolio ImgSrc={assets.bannerSrc} profileData={profileData}/>} />
-        <Route path={pagesPaths.blogPath} element={<Blog ImgSrc={assets.bannerSrc} profileData={profileData}/>} />
-        <Route path={pagesPaths.contactPath} element={<Contact profileData={profileData}/>} />
-        <Route path={pagesPaths.legalNoticesPath} element={<LegalNotices profileData={profileData}/>} />
-        <Route path={pagesPaths.notFoundPath} element={<NotFound />} />
+        <Route path={pagesPaths[0].path} element={<Home homeBackgroundUrl={assets.homeBackgroundUrl} profileData={profileData}/>} />
+        <Route path={pagesPaths[1].path} element={<Services ImgSrc={assets.bannerSrc}/>} />
+        <Route path={pagesPaths[2].path} element={<Portfolio ImgSrc={assets.bannerSrc} profileData={profileData}/>} />
+        <Route path={pagesPaths[3].path} element={<Blog ImgSrc={assets.bannerSrc} profileData={profileData}/>} />
+        <Route path={pagesPaths[4].path} element={<Contact profileData={profileData}/>} />
+        <Route path={pagesPaths[5].path} element={<LegalNotices profileData={profileData}/>} />
+        <Route path={pagesPaths[6].path} element={<NotFound />}/>
         <Route path="*" element={<NotFound pagesPaths={pagesPaths} />} />
       </Routes>
       <Footer notFound={notFound} pagesPaths={pagesPaths} profileData={profileData}/>

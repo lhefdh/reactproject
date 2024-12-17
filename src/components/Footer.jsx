@@ -13,25 +13,25 @@ export default function Footer({pagesPaths, notFound, profileData}) {
     
     // Faire apparaitre le bouton 'TOP' à partir d'une certaine hauteur (ScrollY)
     window.addEventListener('scroll', function() {
-       if (location.pathname === pagesPaths.servicesPath) {
+       if (location.pathname === pagesPaths[1].path) {
         if (window.scrollY >= 250) {
             setShowTopButton(true)
         } else {
             setShowTopButton(false);
         }
-       } else if (location.pathname === pagesPaths.portfolioPath) {
+       } else if (location.pathname === pagesPaths[2].path) {
         if (window.scrollY >= 500) {
             setShowTopButton(true)
         } else {
             setShowTopButton(false);
         }
-       } else if (location.pathname === pagesPaths.blogPath) {
+       } else if (location.pathname === pagesPaths[3].path) {
         if (window.scrollY >= 1200) {
             setShowTopButton(true)
         } else {
             setShowTopButton(false);
         }
-       } else if (location.pathname === pagesPaths.contactPath) {
+       } else if (location.pathname === pagesPaths[4].path) {
         if (window.scrollY >= 300) {
             setShowTopButton(true)
         } else {
@@ -47,11 +47,11 @@ export default function Footer({pagesPaths, notFound, profileData}) {
     });
     
     let listProjects= profileData.projects.map((project, index) =>
-        <li className="ps-1" key={index}><HashLink className="nav-link" to="../pages/Portfolio#portfolioCards">{project.name}</HashLink></li>);
+        <li className="ps-1" key={index}><HashLink className="nav-link" to={`${pagesPaths[2].path}#portfolioCards`}>{project.name}</HashLink></li>);
     // selection des trois derniers articles les plus récents
     let recentArticles= profileData.articles.slice(0,3);
     let listArticles= recentArticles.map((article, index) => 
-        <li className="ps-1" key={index}><HashLink className="nav-link" to="../pages/Blog#lastArticles" >{article.title}</HashLink></li>);
+        <li className="ps-1" key={index}><HashLink className="nav-link" to={`${pagesPaths[3].path}#lastArticles`}>{article.title}</HashLink></li>);
        
    
 if (!notFound){
@@ -72,11 +72,11 @@ if (!notFound){
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">
                     <h5 >Liens utiles </h5>
                     <ul className="ps-1 ms-3" >
-                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.homePath}>Accueil</Link></li>
-                        <li className="ps-1"><HashLink className="nav-link" to={`${pagesPaths.homePath}#apropos`}><span className="text-capitalize">à</span> propos</HashLink></li>
-                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.servicesPath}>Services</Link></li>
-                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.contactPath}>Me contacter</Link></li>
-                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.legalNoticesPath}>Mentions légales</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths[0].path}>Accueil</Link></li>
+                        <li className="ps-1"><HashLink className="nav-link" to={`${pagesPaths[0].path}#apropos`}><span className="text-capitalize">à</span> propos</HashLink></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths[1].path}>Services</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths[4].path}>Me contacter</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths[5].path}>Mentions légales</Link></li>
                     </ul>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">
