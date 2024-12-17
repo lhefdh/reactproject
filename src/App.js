@@ -189,7 +189,7 @@ const [profileData, setProfileData] = useState({
   window.addEventListener("resize", () => {getBackgroundSize(window.innerWidth)});
 
   let pagesPaths={
-    homePath:"/reactproject",
+    homePath:"/reactproject/",
     servicesPath:"/pages/Services",
     portfolioPath:"/pages/Portfolio",
     blogPath:"/pages/Blog",
@@ -214,7 +214,7 @@ const [profileData, setProfileData] = useState({
         <Route path={pagesPaths.contactPath} element={<Contact profileData={profileData}/>} />
         <Route path={pagesPaths.legalNoticesPath} element={<LegalNotices profileData={profileData}/>} />
         <Route path={pagesPaths.notFoundPath} element={<NotFound />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound pagesPaths={pagesPaths} />} />
       </Routes>
       <Footer notFound={notFound} pagesPaths={pagesPaths} profileData={profileData}/>
     </div>

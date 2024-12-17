@@ -49,7 +49,7 @@ export default function Footer({pagesPaths, notFound, profileData}) {
     let listProjects= profileData.projects.map((project, index) =>
         <li className="ps-1" key={index}><HashLink className="nav-link" to="../pages/Portfolio#portfolioCards">{project.name}</HashLink></li>);
     // selection des trois derniers articles les plus récents
-    let recentArticles= profileData.articles.slice(-3);
+    let recentArticles= profileData.articles.slice(0,3);
     let listArticles= recentArticles.map((article, index) => 
         <li className="ps-1" key={index}><HashLink className="nav-link" to="../pages/Blog#lastArticles" >{article.title}</HashLink></li>);
        
@@ -72,11 +72,11 @@ if (!notFound){
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">
                     <h5 >Liens utiles </h5>
                     <ul className="ps-1 ms-3" >
-                        <li className="ps-1"><Link className="nav-link" to="../pages/">Accueil</Link></li>
-                        <li className="ps-1"><HashLink className="nav-link" to="../pages/#apropos"><span className="text-capitalize">à</span> propos</HashLink></li>
-                        <li className="ps-1"><Link className="nav-link" to="../pages/Services">Services</Link></li>
-                        <li className="ps-1"><Link className="nav-link" to="../pages/Contact">Me contacter</Link></li>
-                        <li className="ps-1"><Link className="nav-link" to="../pages/LegalNotices">Mentions légales</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.homePath}>Accueil</Link></li>
+                        <li className="ps-1"><HashLink className="nav-link" to={`${pagesPaths.homePath}#apropos`}><span className="text-capitalize">à</span> propos</HashLink></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.servicesPath}>Services</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.contactPath}>Me contacter</Link></li>
+                        <li className="ps-1"><Link className="nav-link" to={pagesPaths.legalNoticesPath}>Mentions légales</Link></li>
                     </ul>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 px-3 footerContainer">

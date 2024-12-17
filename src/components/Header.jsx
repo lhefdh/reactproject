@@ -24,19 +24,19 @@ export default function Header({pagesPaths, notFound, name}) {
             <div className="flex-d justify-content-end collapse navbar-collapse me-5" id="navbarSupportedContent">
                 <ul className="navbar-nav mb-2 mb-lg-0 text-secondary">
                     <li className="nav-item">
-                        <Link className={homeLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/">accueil</Link>
+                        <Link className={homeLinkIsActive? "nav-link active":"nav-link text-secondary"} to={pagesPaths.homePath}>accueil</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={servicesLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Services">services</Link>
+                        <Link className={servicesLinkIsActive? "nav-link active":"nav-link text-secondary"} to={pagesPaths.servicesPath}>services</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={portfolioLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Portfolio">mes réalisations</Link>
+                        <Link className={portfolioLinkIsActive? "nav-link active":"nav-link text-secondary"} to={pagesPaths.portfolioPath}>mes réalisations</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={blogLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Blog">mon blog</Link>
+                        <Link className={blogLinkIsActive? "nav-link active":"nav-link text-secondary"} to={pagesPaths.blogPath}>mon blog</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={contactLinkIsActive? "nav-link active":"nav-link text-secondary"} to="../pages/Contact">contact</Link>
+                        <Link className={contactLinkIsActive? "nav-link active":"nav-link text-secondary"} to={pagesPaths.contactPath}>contact</Link>
                     </li>
                 </ul>
             </div>
