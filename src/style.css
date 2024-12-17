@@ -85,9 +85,6 @@ li::marker {
   color: black !important;
 }
 
-.active {
-    color: white !important;
-}
 .card-footer{
   background-color: #EEE;
 }

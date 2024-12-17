@@ -36,7 +36,7 @@ export default function PageTitle(props) {
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1 className="text-uppercase">{titleData[id-1].title}</h1>
+            <h1 className="text-uppercase text-center">{titleData[id-1].title}</h1>
             <p className="m-0 p-0">{(titleData.id===1) ? titleData[id-1].description : ''}</p>
             <hr className="hr border border-1 w-25"/>     
         </div>

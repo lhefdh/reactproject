@@ -6,11 +6,11 @@ import aboutImage from '../img/john-doe-about.jpg';
 export default function Home({homeBackgroundUrl, profileData}) {
 
     return (
-      <div className="bg-white">
+      <div>
         <div  id="home" className="container-fluid bg-image shadow-2-strong" style={homeBackgroundUrl} >
           <div className="mask">
             <div className="container pt-5 d-flex flex-column align-items-center justify-content-center align-content-center text-center text-white">
-              <h1 className="pt-5">Bonjour, je suis {profileData.name}</h1>
+              <h1 className="pt-5">Bonjour, je suis <span className="text-capitalize">{profileData.name}</span></h1>
               <h5 className="pt-3">Développeur Web Full Stack</h5>
               <HashLink id="welcome-Btn" className="btn btn-outline-light btn-lg m-4"  to="#apropos" role="button"
                 rel="nofollow" >En savoir plus</HashLink>
